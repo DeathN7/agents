@@ -1,0 +1,438 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.header{
+    /* position: fixed; */
+    height: 46px;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.header__logo{
+    width: 54px;
+    height: 29px;
+    background-color: #000;
+    float: left;
+    line-height: 46px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.nav{
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.nav li{
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 46px;
+    padding: 4px 15px;
+    margin-left: 12px;
+    font-size: 1rem;
+}
+
+.nav > li > a:hover {
+    background-color: #707070;
+    border-radius: 3px;
+}
+
+.nav > li:hover{
+    border-bottom: 3px solid rgb(255, 0, 0);
+}
+
+.nav .subnav{
+    z-index: 0;
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    width: 133px;
+    text-align: left;
+    padding: 0px 12px;
+    margin-top: 4px;
+}
+
+.nav .subnav li{
+    display: block;
+    width: 130px;
+
+}
+
+.nav--arrow{
+    font-size: 0.5rem;
+}
+
+.nav .subnav a{
+    color: #b3b3b3;
+    font-size: 0.6rem;
+    padding: 4px 4px;
+    line-height: 27px;
+}
+
+.nav .subnav a:hover{
+    background-color: #8f8e8e;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+}
+
+.nav li:hover .subnav{
+    display: block;
+}
+
+.global-icon-item{
+    color: var(--white-color);
+    
+}
+
+.header .global-icon{
+    float: right;
+    line-height: 48px;
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+/* Slider */
+.slider{
+    position: relative;
+    height: 600px;
+    background: url("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltbded518020183769/5eb26f5389bac8148a8006cc/agent-background-generic.JPG") top center / cover no-repeat;
+    display: block;
+}
+
+/* agents */
+.wrap__agents-infor{
+    position: absolute;
+    top: 18%;
+    left: 20%;
+}
+
+.wrap__agents-names{
+    list-style: none;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 3rem;
+    padding: 11px 170px 6px 46px;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+}
+
+.agent-img{
+    z-index: 1;
+    position: absolute;
+    height: 700px;
+    right: 38%;
+    top: 4%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.wrap__agent-left{
+    position: absolute;
+    top: 37%;
+    right: 21%;
+    width: 270px;
+    height: 360px;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--white-color);
+    font-size: 1rem;
+}
+
+.wrap__agent-job-in4-img{
+    opacity: 0.9;
+    transform: translate(0px, 0px);
+    height: 20px;
+    width: 20px;
+    padding-left: 8px;
+    padding-top: 3px;
+}
+
+.wrap__agent-job-in4{
+    display: flex;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    animation: reveal 0.5s forwards;
+    transform-origin: right;
+    transform: scaleY(0);
+}
+
+.wrap__agent-job{
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.wrap__agent-history{
+    line-height: 1.4;
+    animation: faceIn linear 0.2s;
+}
+
+.wrap__agent-history h3{
+    text-transform: uppercase;
+}
+
+.wrap__agent-history p{
+    animation: reveal 0.5s forwards;
+}
+
+.wrap__agents-names:hover{
+    color: var(--word-color);
+    transform: translate(5px, 0px);
+}
+
+.wrap__agents-names.open {
+    color: var(--word-color);
+    transform: translate(5px, 0px);
+}
+/* .wrap__agents-names.Jett{
+    color: var(--word-color);
+    transform: translate(5px, 0px);
+} */
+
+/* Jett */
+.Jett{
+    display: block;
+}
+
+.Jett.close{
+    display: none;
+}
+
+.Jett.open{
+    display: block;
+}
+
+
+/* Chamber */
+.Chamber{
+    display: none;
+}
+
+.Chamber.open{
+    display: block;
+}
+
+/* Sova */
+.Sova{
+    display: none;
+}
+
+.Sova.open{
+    display: block;
+}
+
+/* Omen */
+.Omen{
+    display: none;
+}
+
+.Omen.open{
+    display: block;
+}
+
+/* Brimmstone */
+.Brimmstone{
+    display: none;
+}
+
+.Brimmstone.open{
+    display: block;
+}
+
+
+/* container */
+.container{
+    position: relative;
+    background-color: rgb(189, 189, 189);
+}
+
+.skill{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    
+}
+
+.agents__skill{
+    height: 900px;
+    margin: 0 160px;
+    list-style: none;
+}
+
+/* Jett */
+.wrap__skill{
+    top: 30%;
+    position: absolute;
+    display: flex;
+    padding: 0 12px;
+    left: 21%;;
+}
+
+.wrap__skill-Q,
+.wrap__skill-E,
+.wrap__skill-C,
+.wrap__skill-X{
+    list-style: none;
+    border: 1px solid;
+    padding: 11px 5px;
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+.wrap__skill-img{
+    height: 43px;
+    width: 43px;
+    color: var(--black-color);
+    padding: 0 12px;
+    cursor: pointer;
+    line-height: 43px;
+}
+
+.wrap__skill-Q:hover,
+.wrap__skill-E:hover,
+.wrap__skill-C:hover,
+.wrap__skill-X:hover{
+    background-color: var(--word-color);
+    opacity: 1;
+}
+
+.wrap__skill-agent{
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 22%;
+    font-size: 1.4rem;
+    animation: reveal 0.5s forwards;
+}
+
+.wrap_Q.close,
+.wrap_E,
+.wrap_C,
+.wrap_X{
+    width: 255px;
+    height: 185px;
+    position: absolute;
+    margin-top: 40px;
+    display: none;
+    transform: translate(7px); 
+}
+
+.wrap_Q{
+    width: 255px;
+    height: 185px;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.wrap__skill-Q-in4,
+.wrap__skill-E-in4,
+.wrap__skill-C-in4,
+.wrap__skill-X-in4{
+    margin-top: 15px;
+}
+/* Phần JS của skill*/
+.wrap_Q.open,
+.wrap_E.open,
+.wrap_C.open,
+.wrap_X.open{
+    display: block;
+    animation: Growth 0.5s forwards;
+}
+
+.wrap__skill-Q.close{
+    background-color: rgb(189, 189, 189);
+    opacity: 0.5;
+}
+
+.wrap__skill-Q{
+    background-color: var(--word-color);
+    opacity: 1;
+}
+
+.wrap__skill-Q.open,
+.wrap__skill-E.open,
+.wrap__skill-C.open,
+.wrap__skill-X.open{
+    display: block;
+    background-color: var(--word-color);
+    opacity: 1;
+}
+
+/* Jett */
+.Jett-skill{
+    display: block;
+}
+
+.Jett-skill.close{
+    display: none;
+}
+
+.Jett-skill.open{
+    display: block;
+}
+
+/* Brimmstone */
+.Brimmstone-skill{
+    display: none;
+}
+
+.Brimmstone-skill.open{
+    display: block;
+}
+
+/* Chamber */
+.Chamber-skill{
+    display: none;
+}
+
+.Chamber-skill.open{
+    display: block;
+}
+
+/* Sova */
+.Sova-skill{
+    display: none;
+}
+
+.Sova-skill.open{
+    display: block;
+}
+
+/* Omen */
+.Omen-skill{
+    display: none;
+}
+
+.Omen-skill.open{
+    display: block;
+}
+
+/* skill video */
+
+.wrap__skill-Q-video,
+.wrap__skill-E-video,
+.wrap__skill-C-video,
+.wrap__skill-X-video{
+    position: absolute;
+    top: -125%;
+    right: -390%;
+    width: 690px;
+    height: 390px;
+    border-bottom: ;
+}

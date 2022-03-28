@@ -1,0 +1,38 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --word-color: #fc5555;
+    --Growth-from: 0.5;
+    --Growth-to: 1;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+@keyframes Growth{
+    from{
+        transform: scale(var(--Growth-from));
+    }
+    to{
+        transform: scale(var(--Growth-to));
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes reveal{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
